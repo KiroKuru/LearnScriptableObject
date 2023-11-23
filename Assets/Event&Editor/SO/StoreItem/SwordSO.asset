@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5253cf19c7e7a4d8b4b3bdea66d5cd, type: 3}
+  m_Name: SwordSO
+  m_EditorClassIdentifier: 
+  itemName: Sword
+  description: This is a light sword.
+  icon: {fileID: 21300000, guid: 5fd50594014b70e48bd6993443d46b32, type: 3}
+  price: 80
+  attack: 60
+  defense: 0
+  clips:
+  - {fileID: 8300000, guid: c5955b1ca51d47245ae5e5e10395d910, type: 3}
+  - {fileID: 8300000, guid: ef18a5a7071e4a54ba749b93057e0864, type: 3}
+  - {fileID: 8300000, guid: 2b8c207613cd58b4889b0cc6bf739f2c, type: 3}
+  - {fileID: 8300000, guid: e82bbf25f546510468b7945834cf6b6f, type: 3}
+  minVolume: 0.49
+  maxVolume: 0.494
+  minPitch: 0.87
+  maxPitch: 0.94
