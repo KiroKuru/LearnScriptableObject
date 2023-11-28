@@ -4,32 +4,26 @@ using UnityEngine;
 
 public class StarMonitor : MonoBehaviour
 {
-    public StarRuntimeSet starRuntimeSet;
-    public int starCount=30;
-
-    public GameObject Star;
+    //public StarRuntimeSet starRuntimeSet;
+    public StarPoolSO starPoolSO;
+    public int initialSize;
     private float spawnCoolDown;
 
-    private void Start() {
-        starRuntimeSet=Star.GetComponent<Star>().RuntimeSet;
-        spawnCoolDown=0;
-    }
-
-    public void SpawnStar(){
-        Vector3 spawnPos=new Vector3(Random.Range(-7.8f,7.8f),Random.Range(-4.2f,4.2f),0);
-        GameObject newStar=GameObject.Instantiate(Star);
-        newStar.transform.position=spawnPos;
+    private void Start()
+    {
+        starPoolSO.PreWarm(initialSize);
+        spawnCoolDown = 0;
     }
 
     private void Update()
-	{
-		spawnCoolDown -= Time.deltaTime;
-		if (spawnCoolDown <= 0) {
-			spawnCoolDown = 0.1f;
-			
-			if (starRuntimeSet.Items.Count < starCount) {
-				SpawnStar ();
-			}
-		}
-	}
+    {
+        spawnCoolDown -= Time.deltaTime;
+        if (spawnCoolDown <= 0)
+        {
+            spawnCoolDown = 0.1f;
+
+            Star star = starPoolSO.Request();
+            star.starPoolSO = starPoolSO;
+        }
+    }
 }

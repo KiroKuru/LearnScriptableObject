@@ -235,9 +235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953b31ee9570b0c47a78402962f71760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starRuntimeSet: {fileID: 11400000, guid: 684325da76905824c94ef3007be7dc1a, type: 2}
-  starCount: 30
-  Star: {fileID: 4175835057142798933, guid: 62fd88016f45d5b4cbe9b98e45f75703, type: 3}
+  starPoolSO: {fileID: 11400000, guid: a4fcf537f97046d4fb1c0e2d2a0f17d2, type: 2}
+  initialSize: 30
 --- !u!4 &1652875058
 Transform:
   m_ObjectHideFlags: 0
